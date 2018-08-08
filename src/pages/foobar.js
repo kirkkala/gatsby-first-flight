@@ -1,0 +1,12 @@
+import React from "react";
+import Link from "gatsby-link";
+
+export default () => (
+  <div>
+    <h1>Foobar Gatsby!</h1>
+    <p>Nothing really to see here</p>
+    <p><Link to="/page-2">The second page</Link><br />
+      <Link to="/counter">The counter</Link></p>
+    <p><Link to="/">back home</Link></p>
+  </div>
+);
