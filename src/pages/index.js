@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 
-export default () => <div style={{ color: '#333', background: 'pink' }}>
+export default () => <div style={{ margin: '3rem auto', maxWidth: 600 }}>
   <h1>Well hello Gatsby!</h1>
   <h2>What a Wunderful world.</h2>
   <ul>
