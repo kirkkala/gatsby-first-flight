@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import Container from "../components/container";
 
 
 class Counter extends React.Component {
@@ -25,6 +26,8 @@ class Counter extends React.Component {
 
     return (
       <div style={{ background: this.state.background }}>
+      <Container>
+
         <h1>Hello counter</h1>
         <p dangerouslySetInnerHTML={{ __html: this.state.counterText }}/>
         <p><button
@@ -70,7 +73,7 @@ class Counter extends React.Component {
           >Reset</button>
         </p>
         <p><Link to="/">Back to home</Link></p>
-
+      </Container>
       </div>
     );
   }
