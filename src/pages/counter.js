@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Container from "../components/container";
+import Label from "../components/label";
 
 
 class Counter extends React.Component {
@@ -14,13 +15,13 @@ class Counter extends React.Component {
   render() {
 
     if (this.state.count === 0) {
-      this.state.counterText = 'You are at zero. Try clicking the numbers';
+      this.state.counterText = '&nbsp;';
       this.state.background = '#ECFFDE';
     } else if (this.state.count > 0) {
-      this.state.counterText = 'Nice, you are at <strong>' + this.state.count + '</strong> which is larger than zero';
+      this.state.counterText = 'You have clicked to <strong>' + this.state.count + '</strong> and it is larger number than zero';
       this.state.background = '#FFE4DE';
     } else {
-      this.state.counterText = 'Your number <strong>' + this.state.count + '</strong> is rather negative';
+      this.state.counterText = 'you have clicked to <strong>' + this.state.count + '</strong> and it is a rather negative number';
       this.state.background = '#DEEFFF';
     }
 
@@ -30,37 +31,37 @@ class Counter extends React.Component {
 
         <h1>Hello counter</h1>
         <p dangerouslySetInnerHTML={{ __html: this.state.counterText }}/>
-        <p><button
+        <p><Label>Add:</Label><button
           onClick={() =>
             this.setState(prevState => ({
               count: prevState.count + 1,
             }))
           }
-        >Add one</button>
+        >+1</button>
           <button
             onClick={() =>
               this.setState(prevState => ({
                 count: prevState.count + 5,
               }))
             }
-          >Add five</button>
+          >+5</button>
         </p>
 
         <p>
-          <button
+          <Label>Remove:</Label><button
             onClick={() =>
               this.setState(prevState => ({
                   count:prevState.count - 1,
                 }
               ))}
-          >Substract by one</button>
+          >-1</button>
           <button
             onClick={() =>
               this.setState(prevState => ({
                   count:prevState.count - 5,
                 }
               ))}
-          >Substract by five</button>
+          >-5</button>
         </p>
 
         <p>
